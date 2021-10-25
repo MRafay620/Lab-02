@@ -4,8 +4,6 @@ class queue:
     self.list=np.arrange(10)
   def enqueue(self, data):
     return np.append(self.list, data)
-  def display(self):
-    return self.list
   def dequeue(self):
     return np.delete((self.list,1))
   def front(self):
