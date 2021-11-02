@@ -1,0 +1,44 @@
+class node:
+  def _init_(self,data=None):
+    self.data=data
+    self.next=None
+class linkedlist:
+  def _init_(self):
+    self.head=node()
+  def append(self, data):
+    new_node = node(data)
+    cur = self.head
+    while cur.next!=None:
+      cur = cur.next
+    cur.next = new_node
+
+  def display(self):
+    cur = self.head
+    dis=[]
+    while cur.next !=None:
+      cur = cur.next
+      dis.append(cur.data)
+    print(dis)
+
+  def delete(self):
+    cur = self.head
+    while (cur.next.next): 
+      seconlast_node = cur.next
+      cur = cur.next
+    cur.next = None
+
+  def len_list(self):
+    size=0
+    cur=self.head
+    while cur.next!=None:
+      size=size+1
+      cur=cur.next
+    print(size)
+
+l=linkedlist()
+l.append(1)
+l.append(2)
+l.append(3)
+l.delete()
+l.display()
+l.len_list()
